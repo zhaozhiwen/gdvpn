@@ -14,6 +14,7 @@
 #include <complex>
 #include <fstream>
 #include <iostream>
+#include <cstdlib>
 using namespace std;
 
 static const double M_PRTN=0.938272;

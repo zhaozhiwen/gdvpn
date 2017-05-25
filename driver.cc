@@ -34,7 +34,7 @@
 #include <fstream>
 #include <cmath>
 #include <complex>
-#include <cuba.h>
+#include "cuba.h"
 #include <time.h>
 // Local libraries
 #include "constants.hh"

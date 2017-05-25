@@ -9,10 +9,10 @@ set(CMAKE_RUNTINE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}")
 set(SOURCE_PATH ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Compiler optimizations
-set(CMAKE_CXX_FLAGS "-Ofast")
+#set(CMAKE_CXX_FLAGS "-Ofast")
 
 # Cuba library is used for integration
-set(CMAKE_CXX_LINK_EXECUTABLE "${CMAKE_CXX_LINK_EXECUTABLE} -lcuba")
+set(CMAKE_CXX_LINK_EXECUTABLE "${CMAKE_CXX_LINK_EXECUTABLE} -L./ -lcuba")
 
 # Libraries in this package
 set(LIBS "vmeson_params" "nnscatter" "dwf" "gdvpn")
