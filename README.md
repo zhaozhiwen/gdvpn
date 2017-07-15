@@ -1,19 +1,31 @@
 Code for J/Psi production in deuteron breakup
 
 ==== how to compile, tested on CentOS6.5_x86_64 ========
+
 git clone https://github.com/zhaozhiwen/gdvpn.git
+
 wget http://www.feynarts.de/cuba/Cuba-4.2.tar.gz
+
 tar zxf Cuba-4.2.tar.gz
+
 cd Cuba-4.2
+
 ./configure
+
 make
+
 cd ../
+
 ln -s Cuba-4.2/libcuba.a
+
 ln -s Cuba-4.2/cuba.h
+
 cmake ./
+
 make
 
 == info =================================================
+
 I'm writing to send you some code I wrote during graduate school for computing the cross section of incoherent J/Psi photoproduction, in the hope that it will be useful in a Monte Carlo event generator.
 
 The central part of the code is gdvpn.cc, which has a routine to compute the five-fold differential cross section with respect to p_V, Omega_V, and Omega_p. It is a function of t, p_n, theta_nl, phi_nl, and phi_v, where l is the three-momentum transferred from the incident photon into the deuteron. There is also a method init_gdvpn which can be used to set the initial kinematics of the photon and deuteron, and can be used to turn on or off specific impulse or rescattering contributions to the cross section.
@@ -27,6 +39,7 @@ This code uses the Cuba integration library, cf. http://www.feynarts.de/cuba/ , 
 I've included a CMakeLists.txt file too, so you can use cmake to build the libraries and a driver program. The driver program was meant to create plaintext files with tables of cross sections at given kinematics in order to make plots. It takes a few optional inputs, which are described in the comments in driver.cc.
 
 == log ===================================================
+
 based on paper https://journals.aps.org/prc/abstract/10.1103/PhysRevC.88.044604
 
 first checkin code from Adam J. Freese <afreese@anl.gov>
