@@ -24,6 +24,14 @@ cmake ./
 
 make
 
+== how to run and result ================================
+
+run like "./driver.elf -E9 -v"
+
+result will be in text file "test" with crossection and final particles mom and angle
+
+see more options and output format in "driver.cc"
+
 == info =================================================
 
 I'm writing to send you some code I wrote during graduate school for computing the cross section of incoherent J/Psi photoproduction, in the hope that it will be useful in a Monte Carlo event generator.
