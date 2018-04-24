@@ -743,7 +743,6 @@ static int gdvpn_kinematics(double args[5], double mv, int solno) {
   double theta_n, phi_n;
   int nosol;
   gdvpn.neutron.E = sqrt(pow(ProtonMass,2)+pow(p_n,2));
-  if(gdvpn.neutron.E>=DeuteronMass) return 2;
   a = 2.*(DeuteronMass-gdvpn.neutron.E);
   b = -2.*p_n*cos(theta_nl);
   c = -pow(DeuteronMass,2) - t + 2.*DeuteronMass*gdvpn.neutron.E;
